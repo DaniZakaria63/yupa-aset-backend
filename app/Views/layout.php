@@ -15,6 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="<?= base_url('css/all.min.css')?>">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url('css/adminlte.min.css')?>">
+  <?= $this->renderSection('style') ?>
 </head>
 <body class="hold-transition layout-top-nav">
 <div class="wrapper">
@@ -25,9 +26,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="content-wrapper">
     <!-- Main content -->
     <div class="content">
-      <div class="container">
-        <?= $this->renderSection('content')?>
-      </div><!-- /.container-fluid -->
+      <div style="height:30px"></div>
+      <?= $this->renderSection('content')?>
     </div>
     <!-- /.content -->
   </div>
@@ -47,5 +47,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('js/adminlte.min.js')?>"></script>
 <!-- AdminLTE for demo purposes -->
 <!-- <script src="../../dist/js/demo.js"></script> -->
+<?= $this->renderSection('script') ?>
 </body>
 </html>
